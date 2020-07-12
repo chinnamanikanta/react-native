@@ -27,7 +27,11 @@ import {
 import Counter from '../../components/Counter';
 
 import EnvironmentConstants from '../../constants/EnvironmentConstants';
-import {goToLaunchScene} from '../../utils/NavigationUtils';
+import {
+  goToLaunchScene,
+  goToForms,
+  gotoTodos,
+} from '../../utils/NavigationUtils';
 import Images from '../../images';
 import I18n from '../../i18n/i18n';
 
@@ -36,6 +40,14 @@ const AppScene = () => {
   const goToLaunchScreen = () => {
     goToLaunchScene();
   };
+
+  const logIn = () => {
+    goToForms();
+  };
+  const todos = () => {
+    gotoTodos();
+  };
+
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />
@@ -65,6 +77,19 @@ const AppScene = () => {
                 <ReloadInstructions />
               </Text>
             </View>
+
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle} onPress={logIn}>
+                manikanta
+              </Text>
+            </View>
+
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle} onPress={todos}>
+                React-native Todos App
+              </Text>
+            </View>
+
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle} onPress={goToLaunchScreen}>
                 Debug

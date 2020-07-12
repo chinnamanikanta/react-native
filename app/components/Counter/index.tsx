@@ -7,7 +7,7 @@ class Counter extends Component {
   };
 
   render() {
-    return <Button title="ADD" color="#f194ff" onPress={this.onPress} />;
+    return <Button title="Button" color="#f194ff" onPress={this.onPress} />;
   }
 }
 
